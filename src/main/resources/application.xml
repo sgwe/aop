@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置目标类 -->
+    <bean id="performance" class="com.example.aop.Performance"></bean>
+
+    <!-- 配置切面类 -->
+    <bean id="userAspectA" class="com.example.aop.Auidence"></bean>
+
+    <!-- 在配置文件中开启注解的AOP的开发 -->
+    <mvc:aspectj-autoproxy></mvc:aspectj-autoproxy>
+
+</beans>
